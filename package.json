@@ -1,0 +1,19 @@
+{
+  "name": "stream-token-api",
+  "version": "1.0.0",
+  "description": "Generate a token for your stream api ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Neevash Ramdial (Nash)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.1",
+    "express": "^4.17.1",
+    "stream-chat": "^2.8.4",
+    "uuid": "^8.3.1"
+  }
+}
