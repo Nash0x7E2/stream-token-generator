@@ -4,7 +4,7 @@ const cors = require('cors');
 require('custom-env').env();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT ?? 8000;
 const API_KEY = process.env.API_KEY;
 const API_SECRET = process.env.API_SECRET;
 
@@ -25,7 +25,7 @@ app.post("/token", async (request, response) => {
 
         const token = client.createToken(user.id);
         await client.upsertUser(user);
-        
+
         return response.status(200).json({
             token: token,
             ...user
