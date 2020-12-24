@@ -1,7 +1,6 @@
 const express = require('express');
 const StreamChat = require('stream-chat').StreamChat;
 const cors = require('cors');
-require('custom-env').env();
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -15,7 +14,7 @@ app.post("/token", async (request, response) => {
     const { name } = request.body;
     try {
         const client = new StreamChat(API_KEY, API_SECRET);
-        const id = "nash";
+        const id = name;
         const user = {
             id: id.toString(),
             name: name,

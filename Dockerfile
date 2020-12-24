@@ -15,7 +15,6 @@ RUN npm install --only=production
 
 # Add remaining app files
 COPY . .
-RUN npm run build
 
 # Start app in prod
 CMD [ "npm", "start" ]
